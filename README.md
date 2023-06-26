@@ -23,3 +23,7 @@ Now that our Apache2 is running we will go ahead and set up MySql for our web da
 
 
 ## INSTALLING MYSQL
+
+MySQL is an open source relational database management system (RDBMS) with a client-server model. it's a software or service used to create and manage databases based on a relational level. Now we are going to run some commands to install and set up MySql. 
+
+First we run `$: sudo apt install mysql-server` then we log into the MySql server to know we get the desired result.
