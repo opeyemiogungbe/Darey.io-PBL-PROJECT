@@ -14,3 +14,4 @@ Sudo apt update`
 
 `for installing apache2 run: 
 Sudo apt install apache2`
+![Screenshot 2023-06-21 053318](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/7feff130-55f1-47fe-8ed7-e3cc2f877021)
