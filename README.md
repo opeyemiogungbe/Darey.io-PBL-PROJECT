@@ -2,7 +2,8 @@
 ## WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
 A web stack is the collection of software (Built on each other) used for web development that comprises, at a minimum, an operating system (linux), a programming language(Php), database software(MySql) and a web server(Apache). Preparing our LAMP STACK will require us setting up our Apache2 webserver, MySql to store our database and Php to for display to the endusers of our web browser.
 
-### UPDATING AND INSTALLING OUR APACHE2 WEBSERVER AND UPDATING THE FIREWALL
+
+### STEP 1: UPDATING AND INSTALLING OUR APACHE2 WEBSERVER AND UPDATING THE FIREWALL
 Apache is an open-source Web server, is is responsible for accepting directory (HTTP) requests from Internet users and sending them their desired information in the form of files and Web pages. it has a safe and secure file-sharing feature, allowing users to put files into the root directory of their Apache software and share them with other users.
 
 ** STEP 1**
@@ -22,7 +23,8 @@ Sudo apt install apache2` To verify that apache2 is running as a Service in our 
 Now that our Apache2 is running we will go ahead and set up MySql for our web database.
 
 
-## INSTALLING MYSQL
+
+## STEP 2: INSTALLING MYSQL
 
 MySQL is an open source relational database management system (RDBMS) with a client-server model. it's a software or service used to create and manage databases based on a relational level. Now we are going to run some commands to install and set up MySql. 
 
@@ -38,3 +40,11 @@ We are also going to set up a password for the root user, using mysql_native_pas
   After setting up our MySql password we are going to check if we can log into our console by running the command 
 
  ` $ sudo mysql -p` we should get a result like our image below: 
+ ![Screenshot 2023-06-21 092008](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/59cdfcd9-a234-4874-9530-abea2c59b276)
+
+
+
+## STEP 3: INSTALLING PHP
+  Now that we have our Apache installed to serve your content and MySQL installed to store and manage your data. We are going to install PHP that will process code to display dynamic content to the end user. In addition to the php package, we will need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. We will also need libapache2-mod-php to enable Apache to handle PHP files.
+
+To install these 3 packages at once, we are going to run: `sudo apt install php libapache2-mod-php php-mysql` after succesful installation we are going to confirm by running the command:` Php -v` we should get something like this: 
