@@ -27,5 +27,14 @@ Now that our Apache2 is running we will go ahead and set up MySql for our web da
 MySQL is an open source relational database management system (RDBMS) with a client-server model. it's a software or service used to create and manage databases based on a relational level. Now we are going to run some commands to install and set up MySql. 
 
 First we run `$: sudo apt install mysql-server` 
+![Screenshot 2023-06-21 063232](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/cd8898cd-be10-4bec-ab7e-f65c3bc052dc)
 
 then we log into the MySql server to know we get the desired result running the command `$ sudo mysql`
+![Screenshot 2023-06-21 063352](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/460f21eb-240b-4595-9bc5-4d57101dd6f8)
+
+
+We are also going to set up a password for the root user, using mysql_native_password as default authentication method by running the command `$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1'; ` before starting interactive script by running: `$ sudo mysql_secure_installation`. 
+
+  After setting up our MySql password we are going to check if we can log into our console by running the command 
+
+ ` $ sudo mysql -p` we should get a result like our image below: 
