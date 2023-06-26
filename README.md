@@ -48,3 +48,14 @@ We are also going to set up a password for the root user, using mysql_native_pas
   Now that we have our Apache installed to serve your content and MySQL installed to store and manage your data. We are going to install PHP that will process code to display dynamic content to the end user. In addition to the php package, we will need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. We will also need libapache2-mod-php to enable Apache to handle PHP files.
 
 To install these 3 packages at once, we are going to run: `sudo apt install php libapache2-mod-php php-mysql` after succesful installation we are going to confirm by running the command:` Php -v` we should get something like this: 
+![Screenshot 2023-06-21 093955](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/e58e8d93-5ed5-4ea2-af43-214e006c2e2e) 
+
+Now that we have succesfullu configured our LAMPSTACK, we will go ahead and set up a proper Apache Virtual Host to hold your website’s files and folders. Virtual host allows you to have multiple websites located on a single machine and users of the websites will not even notice it.
+
+
+
+## STEP 4 — CREATING A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE
+
+
+
+
