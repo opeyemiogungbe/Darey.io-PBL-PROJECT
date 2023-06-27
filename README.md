@@ -86,3 +86,6 @@ Now i'm going to test all the above confugureation on my web browser to see if e
 We will create a PHP script to test that PHP is correctly installed and configured on your server and to confirm that Apache is able to handle and process requests for PHP files. We are going to run the command: `vim /var/www/projectlamp/index.php` and put in the following text inside the file:
 `<?php
 phpinfo();` After saving we should get the infofmation below in our browser. 
+![Screenshot 2023-06-23 100429](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/a1f85f4d-481a-45bc-9f05-fe4ef2a59cb0)
+
+![Screenshot 2023-06-23 131607](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/1eb7d247-bea4-45c6-a68a-6a20342bb97c)
