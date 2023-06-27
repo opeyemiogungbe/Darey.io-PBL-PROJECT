@@ -3,6 +3,8 @@
 A web stack is the collection of software (Built on each other) used for web development that comprises, at a minimum, an operating system (linux), a programming language(Php), database software(MySql) and a web server(Apache). Preparing our LAMP STACK will require us setting up our Apache2 webserver, MySql to store our database and Php to for display to the endusers of our web browser.
 
 
+
+
 ### STEP 1: UPDATING AND INSTALLING OUR APACHE2 WEBSERVER AND UPDATING THE FIREWALL
 Apache is an open-source Web server, is is responsible for accepting directory (HTTP) requests from Internet users and sending them their desired information in the form of files and Web pages. it has a safe and secure file-sharing feature, allowing users to put files into the root directory of their Apache software and share them with other users.
 
@@ -21,6 +23,7 @@ Sudo apt install apache2` To verify that apache2 is running as a Service in our 
 ![Screenshot 2023-06-21 053318](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/7feff130-55f1-47fe-8ed7-e3cc2f877021)
 
 Now that our Apache2 is running we will go ahead and set up MySql for our web database.
+
 
 
 
@@ -44,6 +47,7 @@ We are also going to set up a password for the root user, using mysql_native_pas
 
 
 
+
 ## STEP 3: INSTALLING PHP
   Now that we have our Apache installed to serve your content and MySQL installed to store and manage your data. We are going to install PHP that will process code to display dynamic content to the end user. In addition to the php package, we will need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. We will also need libapache2-mod-php to enable Apache to handle PHP files.
 
@@ -51,6 +55,7 @@ To install these 3 packages at once, we are going to run: `sudo apt install php 
 ![Screenshot 2023-06-21 093955](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/e58e8d93-5ed5-4ea2-af43-214e006c2e2e) 
 
 Now that we have succesfullu configured our LAMPSTACK, we will go ahead and set up a proper Apache Virtual Host to hold your website’s files and folders. Virtual host allows you to have multiple websites located on a single machine and users of the websites will not even notice it.
+
 
 
 
@@ -73,4 +78,11 @@ After this i'm going to create and open a new configuration file in Apache’s s
 This means our port is set at port 80, our server and alias name is named Projectlamp and our documents location is stored at Var/www/pprojectlamp. The above settings means we are telling Apache to serve projectlamp using /var/www/projectlampl as its web root directory. After all this is done we are going to  disable Apache default configuration, check for syntax error and restart our Apache for our new configuration to start working. after all this is done we are going to put something into our empty webroot directory /var/www/projectlamp. To test if the virtual host is working we are going to creat an index.html file inside our webroot fold using the Eco command: 
 
 `sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html` 
-Now i'm going to test all the above confugureation on my web browser to see if everything is working right. Using my ip address i should get the following.
+Now i'm going to test all the above confugureation on my web browser to see if everything is working right. Using my ip address i should get the result below: 
+![Screenshot 2023-06-23 094921](https://github.com/opeyemiogungbe/Darey.io-PBL-PROJECT/assets/136735745/d2d53e26-066f-44d7-8b52-b5786ebc9892)
+
+
+## STEP 5: ENABLE PHP ON THE WEBSITE
+We will create a PHP script to test that PHP is correctly installed and configured on your server and to confirm that Apache is able to handle and process requests for PHP files. We are going to run the command: `vim /var/www/projectlamp/index.php` and put in the following text inside the file:
+`<?php
+phpinfo();` After saving we should get the infofmation below in our browser. 
