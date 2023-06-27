@@ -56,6 +56,21 @@ Now that we have succesfullu configured our LAMPSTACK, we will go ahead and set 
 
 ## STEP 4 — CREATING A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE
 
+To create a virtual host for our Apache, we are going to first make a directory. i decided to mkae this directory projectlamp. i'm going to do this runing the command: `sudo mkdir /var/www/projectlamp` .
+
+After this i'm going to create and open a new configuration file in Apache’s sites-available directory using Vi or Vim command-line editor. We are going to run the command: `sudo vi /etc/apache2/sites-available/projectlamp.conf`. this is going to give us the result below: 
+
+`<VirtualHost *:80>
+    ServerName projectlamp
+    ServerAlias www.projectlamp 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projectlamp
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>`
 
 
+This means our port is set at port 80, our server and alias name is named Projectlamp and our documents location is stored at Var/www/pprojectlamp. The above settings means we are telling Apache to serve projectlamp using /var/www/projectlampl as its web root directory. After all this is done we are going to  disable Apache default configuration, check for syntax error and restart our Apache for our new configuration to start working. after all this is done we are going to put something into our empty webroot directory /var/www/projectlamp. To test if the virtual host is working we are going to creat an index.html file inside our webroot fold using the Eco command: 
 
+`sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html` 
+Now i'm going to test all the above confugureation on my web browser to see if everything is working right. Using my ip address i should get the following.
